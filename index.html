@@ -217,7 +217,7 @@ p{color:var(--muted)}
 .works .section-head h2,.works .section-head{color:#fff}
 .works .section-head p{color:#cdd4cd}
 .works .eyebrow{color:var(--gold-light)}
-.works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative}
+.works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative;align-items:start}
 .work{background:rgba(255,255,255,.05);border:1px solid rgba(231,206,147,.2);border-radius:var(--r-lg);overflow:hidden;transition:transform .35s var(--ease)}
 .work:hover{transform:translateY(-5px)}
 .work .ph{cursor:zoom-in;overflow:hidden;background:#fff}
@@ -244,7 +244,7 @@ p{color:var(--muted)}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .member{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .member:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
-.member .ph{aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#eee,#ddd)}
+.member .ph{aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#f3f0ea,#e7e1d4)}
 .member .ph img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s var(--ease)}
 .member:hover .ph img{transform:scale(1.04)}
 .member-body{padding:22px 24px;text-align:center}
@@ -364,6 +364,40 @@ p{color:var(--muted)}
 [data-reveal][data-delay="3"]{transition-delay:.24s}
 [data-reveal][data-delay="4"]{transition-delay:.32s}
 
+/* ===================== FEATURED SERVICE (sedation) ===================== */
+.svc-feat{border-color:var(--gold);background:linear-gradient(180deg,#fffdf8,#fff)}
+.svc-feat .ic{background:var(--grad-green)}
+.svc-feat .ic svg{color:var(--gold-light)}
+
+/* ===================== SEDATION SECTION ===================== */
+.sedation-sec{padding-top:0}
+.sedation-card{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(24px,4vw,56px);align-items:center;background:var(--grad-green);border-radius:var(--r-lg);padding:clamp(26px,4vw,54px);color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-md)}
+.sedation-card::before{content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;background:radial-gradient(circle,rgba(201,162,75,.22),transparent 70%)}
+.sedation-media{position:relative;z-index:1}
+.sedation-media img{width:100%;max-width:420px;margin:0 auto;border-radius:24px;display:block;background:rgba(255,255,255,.06)}
+.sedation-body{position:relative;z-index:1}
+.sedation-body .eyebrow{color:var(--gold-light)}
+.sedation-body h2{color:#fff;margin:14px 0 16px;font-size:clamp(1.9rem,4.4vw,3rem)}
+.sedation-body>p{color:#dfe5df;font-size:1.06rem;margin-bottom:22px}
+.sedation-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.sedation-list li{display:flex;align-items:center;gap:12px;color:#fff;font-weight:600}
+.sedation-list svg{width:22px;height:22px;color:var(--gold-light);flex:none}
+.sedation-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.sedation-price{display:flex;flex-direction:column;line-height:1.1}
+.sedation-price span{font-size:.82rem;color:#c4ccc4;font-weight:600}
+.sedation-price b{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--gold-light)}
+
+/* ===================== MOBILE MENU HOURS ===================== */
+.mm-hours{display:flex;gap:12px;align-items:flex-start;margin-top:20px;padding:16px;background:var(--cream);border-radius:14px}
+.mm-hours svg{width:22px;height:22px;color:var(--gold-dark);flex:none;margin-top:2px}
+.mm-hours b{display:block;font-size:.98rem;color:var(--ink)}
+.mm-hours span{font-size:.9rem;color:var(--muted)}
+
+/* ===================== BOOKING HOURS NOTE ===================== */
+.bk-hours-note{display:flex;align-items:center;gap:9px;font-size:.86rem;color:var(--muted);background:var(--cream);border-radius:11px;padding:11px 14px;margin:4px 0 6px;line-height:1.4}
+.bk-hours-note svg{width:18px;height:18px;color:var(--gold-dark);flex:none}
+.bk-hours-note b{color:var(--ink);font-weight:700}
+
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:1080px){
   .nav-links{display:none}
@@ -384,6 +418,8 @@ p{color:var(--muted)}
   .works-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
   .hero-badge{display:none}
+  .sedation-card{grid-template-columns:1fr;gap:28px}
+  .sedation-media img{max-width:300px}
 }
 @media(max-width:640px){
   body{font-size:17px;padding-bottom:74px}
@@ -424,7 +460,7 @@ p{color:var(--muted)}
   <div class="container">
     <div class="tb-left">
       <a href="#contacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>г. Талгар, ул. Лермонтова, 54а, 2 этаж</a>
-      <span class="tb-hide"><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ежедневно 09:00–18:00</a></span>
+      <span class="tb-hide"><a href="#contacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Без выходных: Пн–Пт 09:00–18:00 · Сб–Вс 10:00–18:00</a></span>
     </div>
     <div class="tb-right">
       <a href="https://www.instagram.com/elite.stomtalgar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@elite.stomtalgar</a>
@@ -469,6 +505,10 @@ p{color:var(--muted)}
   <a href="#reviews">Отзывы</a>
   <a href="#prices">Цены</a>
   <a href="#contacts">Контакты</a>
+  <div class="mm-hours">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+    <div><b>Работаем без выходных</b><span>Пн–Пт 09:00–18:00<br>Сб–Вс 10:00–18:00</span></div>
+  </div>
   <div class="mm-actions">
     <a href="#booking" class="btn btn-gold">Записаться онлайн</a>
     <a href="https://wa.me/77000201212" target="_blank" rel="noopener" class="btn btn-wa">
@@ -496,7 +536,7 @@ p{color:var(--muted)}
       <div class="hero-trust" data-reveal data-delay="4">
         <div class="trust-chip"><span class="stars">★★★★★</span> 4.9 · 708 отзывов на 2ГИС</div>
         <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 1.66-.9 3.1-2.2 3.9.2 1.5-.3 3-1.4 4-.1 1.6-1 3-2.5 3.6-1.3.6-2.8.4-3.9-.5-1.1.9-2.6 1.1-3.9.5-1.5-.6-2.4-2-2.5-3.6-1.1-1-1.6-2.5-1.4-4C1.9 15.1 1 13.66 1 12s.9-3.1 2.2-3.9c-.2-1.5.3-3 1.4-4 .1-1.6 1-3 2.5-3.6 1.3-.6 2.8-.4 3.9.5 1.1-.9 2.6-1.1 3.9-.5 1.5.6 2.4 2 2.5 3.6 1.1 1 1.6 2.5 1.4 4C20.1 8.9 21 10.34 21 12z"/></svg> Гарантия на лечение</div>
-        <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s1-4 9-4 9 4 9 4"/><path d="M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg> Рассрочка 0%</div>
+        <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Без выходных · с 09:00 до 18:00</div>
       </div>
     </div>
   </div>
@@ -571,13 +611,13 @@ p{color:var(--muted)}
       </div>
       <div class="value" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v4M16 3v4M4 11h16"/><rect x="3" y="5" width="18" height="16" rx="2"/></svg></div>
-        <h3>Рассрочка 0%</h3>
-        <p>Сложное лечение можно оплатить частями без переплат. Подберём комфортный график оплаты на консультации.</p>
+        <h3>Рассрочка</h3>
+        <p>Сложное лечение можно оплатить частями. Подберём комфортный график оплаты на консультации.</p>
       </div>
       <div class="value" data-reveal data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></div>
         <h3>Команда специалистов</h3>
-        <p>Хирург-имплантолог, терапевты, детский врач и гигиенист — узкие специалисты под каждую задачу в одной клинике.</p>
+        <p>Хирург-имплантолог, ортодонт, терапевты, анестезиолог и гигиенист — узкие специалисты под каждую задачу в одной клинике.</p>
       </div>
       <div class="value" data-reveal data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0c0-1.7-1-3-1.5-5.5C13 3 12.5 2 12 2s-1 1-1.5 3.5C10 8 9 9.3 9 11z"/><path d="M7 19c0-2 1.2-3 2.5-3s1.5 1 2.5 1 1.2-1 2.5-1S17 17 17 19c0 2-1 3-2 3s-1.5-1-3-1-2 1-3 1-2-1-2-3z"/></svg></div>
@@ -597,63 +637,88 @@ p{color:var(--muted)}
       <p>Всё в одном месте — от профилактики до сложной имплантации. Точную стоимость врач назовёт после бесплатного осмотра.</p>
     </div>
     <div class="services-grid" id="prices">
-      <div class="svc" data-reveal>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-2 0-3.5 1.3-5 1.3S4 2.7 3.2 4.4C2 7 3 12 4.5 16c.8 2.2 1.4 4 2.5 4 1 0 1.3-1.5 2-3.5.4-1.2.9-2 3-2s2.6.8 3 2c.7 2 1 3.5 2 3.5 1.1 0 1.7-1.8 2.5-4C22 12 23 7 21.8 4.4 21 2.7 19.5 3.3 17 3.3S14 2 12 2z"/></svg></div>
-        <h3>Терапия и лечение</h3>
-        <p>Лечение кариеса, пульпита и эстетическая реставрация зубов современными материалами.</p>
-        <div class="price"><div><b>от 20 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="svc svc-feat" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+        <h3>Лечение под седацией</h3>
+        <p>Лечение во сне для детей и взрослых — без страха, боли и стресса. Под контролем врача-анестезиолога.</p>
+        <div class="price"><div><b>от 29 900 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M8 6h8M9 10h6M10 14h4"/></svg></div>
         <h3>Имплантация зубов</h3>
         <p>Восстановление утраченных зубов на имплантах премиум-систем «под ключ» — надёжно и навсегда.</p>
-        <div class="price"><div><b>от 180 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="price"><div><b>от 70 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></div>
         <h3>Протезирование</h3>
         <p>Коронки из металлокерамики и диоксида циркония, виниры — эстетика и комфорт надолго.</p>
-        <div class="price"><div><b>от 50 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="price"><div><b>от 25 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3l6 6L9 20.5 3 21l.5-6z"/><path d="M13 5l6 6"/></svg></div>
         <h3>Хирургия</h3>
-        <p>Удаление зубов любой сложности, в том числе «восьмёрок», аккуратно и без последствий.</p>
-        <div class="price"><div><b>от 8 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <p>Удаление зубов любой сложности у взрослых и детей, аккуратно и без последствий.</p>
+        <div class="price"><div><b>от 2 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
-        <h3>Профгигиена</h3>
-        <p>Чистка Air Flow и ультразвук: снимаем налёт и камень, возвращаем зубам естественный блеск.</p>
-        <div class="price"><div><b>от 15 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <h3>Профессиональная чистка</h3>
+        <p>3-этапная чистка Air Flow и ультразвук: снимаем налёт и камень, возвращаем зубам естественный блеск.</p>
+        <div class="price"><div><b>от 10 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M9 7a3 3 0 0 1 3-2M4 21c0-3 3.5-5 8-5s8 2 8 5"/></svg></div>
-        <h3>Детская стоматология</h3>
+        <h3>Детская терапия</h3>
         <p>Лечим детей бережно и в игровой форме. Без боли, без стресса и без страха перед врачом.</p>
-        <div class="price"><div><b>от 10 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="price"><div><b>от 7 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-2 0-3.5 1.3-5 1.3S4 2.7 3.2 4.4C2 7 3 12 4.5 16c.8 2.2 1.4 4 2.5 4 1 0 1.3-1.5 2-3.5.4-1.2.9-2 3-2s2.6.8 3 2c.7 2 1 3.5 2 3.5 1.1 0 1.7-1.8 2.5-4C22 12 23 7 21.8 4.4 21 2.7 19.5 3.3 17 3.3S14 2 12 2z"/></svg></div>
+        <h3>Взрослая терапия</h3>
+        <p>Лечение кариеса, пульпита и эстетическая реставрация зубов современными материалами.</p>
+        <div class="price"><div><b>от 15 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="svc" data-reveal data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 8c-3 0-5 2-5 6 0 5 2 8 5 8s5-3 5-8c0-4-2-6-5-6z"/></svg></div>
         <h3>Лечение каналов</h3>
         <p>Эндодонтия и перелечивание под увеличением — сохраняем зуб даже в сложных случаях.</p>
-        <div class="price"><div><b>от 30 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-      <div class="svc" data-reveal data-delay="1">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4 4 .5-3 3 .8 4.3L12 17l-3.8 1.8.8-4.3-3-3 4-.5z"/></svg></div>
-        <h3>Отбеливание</h3>
-        <p>Безопасное осветление эмали до нескольких тонов. Голливудская улыбка за один визит.</p>
-        <div class="price"><div><b>от 50 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="price"><div><b>от 25 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="15" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg></div>
-        <h3>Брекеты и элайнеры</h3>
-        <p>Исправление прикуса для детей и взрослых. Ровные зубы и уверенная улыбка по индивидуальному плану.</p>
-        <div class="price"><div><b>от 250 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <h3>Ортодонтическое лечение</h3>
+        <p>Исправление прикуса брекетами и элайнерами для детей и взрослых — ровные зубы и уверенная улыбка.</p>
+        <div class="price"><div><b>от 20 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </div>
     <div class="center" style="margin-top:42px" data-reveal>
       <a href="#booking" class="btn btn-green">Получить точный расчёт лечения</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEDATION HIGHLIGHT ============ -->
+<section class="section sedation-sec">
+  <div class="container">
+    <div class="sedation-card" data-reveal>
+      <div class="sedation-media">
+        <img src="assets/sedation.png" alt="Лечение зубов под седацией — ребёнок спокойно спит во время приёма">
+      </div>
+      <div class="sedation-body">
+        <span class="eyebrow">Лечение во сне</span>
+        <h2>Лечение под седацией —<br>без страха и боли</h2>
+        <p>Идеально для детей и тех, кто боится стоматолога. Пациент спокойно спит, а врач за один визит выполняет весь объём лечения. Процедура проходит под постоянным контролем врача-анестезиолога — безопасно для взрослых и малышей.</p>
+        <ul class="sedation-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Без стресса и слёз у ребёнка</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Весь объём лечения за один приём</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Контроль врача-анестезиолога</li>
+        </ul>
+        <div class="sedation-cta">
+          <div class="sedation-price"><span>Стоимость</span><b>от 29 900 ₸</b></div>
+          <a href="#booking" class="btn btn-gold">Записаться на консультацию</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -699,6 +764,22 @@ p{color:var(--muted)}
           <p>До — боль и воспаление. После — зуб восстановлен, воспаление снято, вернулся комфорт без боли.</p>
         </div>
       </div>
+      <div class="work" data-reveal>
+        <div class="ph"><img src="assets/case-cleaning-1.jpg" alt="Профессиональная чистка зубов до и после" loading="lazy"></div>
+        <div class="work-meta">
+          <span class="doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Врач: Асем Батырбековна</span>
+          <h3>Профессиональная чистка</h3>
+          <p>3-этапная чистка зубов: снят налёт и зубной камень, дёсны здоровы, улыбка снова сияет.</p>
+        </div>
+      </div>
+      <div class="work" data-reveal data-delay="1">
+        <div class="ph"><img src="assets/case-cleaning-2.jpg" alt="Профессиональная чистка зубов до и после — второй случай" loading="lazy"></div>
+        <div class="work-meta">
+          <span class="doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Врач: Асем Батырбековна</span>
+          <h3>Чистка и здоровье дёсен</h3>
+          <p>До — налёт и пигментация. После — чистые зубы и здоровые дёсны после профессиональной гигиены.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -730,28 +811,32 @@ p{color:var(--muted)}
     </div>
     <div class="team-grid">
       <div class="member lead-card" data-reveal>
-        <div class="ph"><img src="assets/dr-akmaral.jpg" alt="Доктор Акмарал Сакыпбеккызы"></div>
-        <div class="member-body"><span class="lead-tag">Основатель</span><div class="role">Главный врач</div><h3>Dr. Akmaral</h3><p>Sakypbekkyzy — основатель клиники</p></div>
+        <div class="ph"><img src="assets/dr-akmaral.jpg" alt="Акмарал Сакыпбековна — основатель клиники Elite Stom"></div>
+        <div class="member-body"><span class="lead-tag">Основатель</span><div class="role">Детский · взрослый терапевт</div><h3>Акмарал Сакыпбековна</h3><p>Главный врач клиники</p></div>
       </div>
       <div class="member" data-reveal data-delay="1">
-        <div class="ph"><img src="assets/doc-safarov.jpg" alt="Сафаров Сафар Надирович"></div>
-        <div class="member-body"><div class="role">Хирург-имплантолог</div><h3>Сафар Надирович</h3><p>Имплантация и хирургия</p></div>
+        <div class="ph"><img src="assets/doc-adil.png" alt="Әділ Қайратович"></div>
+        <div class="member-body"><div class="role">Терапевт · хирург</div><h3>Әділ Қайратович</h3><p>Лечение, реставрация и хирургия</p></div>
       </div>
       <div class="member" data-reveal data-delay="2">
-        <div class="ph"><img src="assets/doc-asem.jpg" alt="Асем Батырбековна"></div>
-        <div class="member-body"><div class="role">Терапевт · детский врач</div><h3>Асем Батырбековна</h3><p>Взрослый и детский приём</p></div>
+        <div class="ph"><img src="assets/doc-asem.png" alt="Асем Батырбековна"></div>
+        <div class="member-body"><div class="role">Терапевт · лечение под седацией</div><h3>Асем Батырбековна</h3><p>Детский и взрослый приём, седация</p></div>
       </div>
       <div class="member" data-reveal>
-        <div class="ph"><img src="assets/doc-adil.jpg" alt="Адиль Кайратович"></div>
-        <div class="member-body"><div class="role">Стоматолог-терапевт</div><h3>Адиль Кайратович</h3><p>Лечение и реставрация</p></div>
+        <div class="ph"><img src="assets/doc-nurbol.png" alt="Нұрбол Қайратович"></div>
+        <div class="member-body"><div class="role">Ортодонт</div><h3>Нұрбол Қайратович</h3><p>Исправление прикуса, брекеты</p></div>
       </div>
       <div class="member" data-reveal data-delay="1">
-        <div class="ph"><img src="assets/doc-nurbol.jpg" alt="Нурбол Кайратович"></div>
-        <div class="member-body"><div class="role">Стоматолог-терапевт</div><h3>Нурбол Кайратович</h3><p>Лечение общей практики</p></div>
+        <div class="ph"><img src="assets/doc-alibaeva.png" alt="Аяжан Медетовна"></div>
+        <div class="member-body"><div class="role">Гигиенист</div><h3>Аяжан Медетовна</h3><p>Профгигиена и профилактика</p></div>
       </div>
       <div class="member" data-reveal data-delay="2">
-        <div class="ph"><img src="assets/doc-alibaeva.jpg" alt="Алибаева Аяжан Медетовна"></div>
-        <div class="member-body"><div class="role">Гигиенист</div><h3>Аяжан Медетовна</h3><p>Профгигиена и профилактика</p></div>
+        <div class="ph"><img src="assets/doc-safarov.png" alt="Сафар Надирович"></div>
+        <div class="member-body"><div class="role">Хирург-имплантолог</div><h3>Сафар Надирович</h3><p>Имплантация и хирургия</p></div>
+      </div>
+      <div class="member" data-reveal>
+        <div class="ph"><img src="assets/doc-ahror.png" alt="Ахрор Шухратович"></div>
+        <div class="member-body"><div class="role">Анестезиолог-реаниматолог</div><h3>Ахрор Шухратович</h3><p>Седация и контроль анестезии</p></div>
       </div>
     </div>
   </div>
@@ -870,7 +955,8 @@ p{color:var(--muted)}
         <div class="bk-points">
           <div class="bk-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><div><b>Бесплатная консультация</b><span>Осмотр и план лечения без оплаты</span></div></div>
           <div class="bk-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Перезвоним за 15 минут</b><span>Быстрый ответ в рабочее время</span></div></div>
-          <div class="bk-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Гарантия и рассрочка 0%</b><span>Честные цены и оплата частями</span></div></div>
+          <div class="bk-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Гарантия и рассрочка</b><span>Честные цены и оплата частями</span></div></div>
+          <div class="bk-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Работаем без выходных</b><span>Пн–Пт 09:00–18:00 · Сб–Вс 10:00–18:00</span></div></div>
         </div>
         <div class="bk-contacts">
           <a href="tel:+77000201212"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+7 700 020 1212</a>
@@ -888,26 +974,35 @@ p{color:var(--muted)}
           <label for="bphone">Телефон</label>
           <input type="tel" id="bphone" name="phone" placeholder="+7 (___) ___-__-__" required>
         </div>
+        <div class="field">
+          <label for="bservice">Услуга</label>
+          <select id="bservice" name="service">
+            <option>Консультация / осмотр</option>
+            <option>Лечение под седацией (во сне)</option>
+            <option>Имплантация</option>
+            <option>Протезирование (коронки)</option>
+            <option>Профессиональная чистка</option>
+            <option>Детская терапия</option>
+            <option>Взрослая терапия</option>
+            <option>Лечение каналов</option>
+            <option>Хирургия</option>
+            <option>Ортодонтия (брекеты)</option>
+            <option>Другое</option>
+          </select>
+        </div>
         <div class="field-row">
-          <div class="field">
-            <label for="bservice">Услуга</label>
-            <select id="bservice" name="service">
-              <option>Консультация / осмотр</option>
-              <option>Лечение кариеса</option>
-              <option>Имплантация</option>
-              <option>Протезирование (коронки)</option>
-              <option>Профгигиена / чистка</option>
-              <option>Детская стоматология</option>
-              <option>Отбеливание</option>
-              <option>Брекеты / элайнеры</option>
-              <option>Другое</option>
-            </select>
-          </div>
           <div class="field">
             <label for="bdate">Удобный день</label>
             <input type="date" id="bdate" name="date">
           </div>
+          <div class="field">
+            <label for="btime">Удобное время</label>
+            <select id="btime" name="time">
+              <option value="">Сначала выберите день</option>
+            </select>
+          </div>
         </div>
+        <p class="bk-hours-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Время приёма зависит от графика: <b>Пн–Пт 09:00–18:00</b>, <b>Сб–Вс 10:00–18:00</b></p>
         <button type="submit" class="btn btn-wa">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8L7 20.5A10 10 0 1 0 12 2z"/></svg>
           Отправить заявку в WhatsApp
@@ -931,7 +1026,7 @@ p{color:var(--muted)}
         <h3 class="serif">Elite Stom</h3>
         <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Адрес</b><span>г. Талгар, ул. Лермонтова, 54а, 2 этаж</span></div></div>
         <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><b>Телефон / WhatsApp</b><a href="tel:+77000201212">+7 700 020 1212</a></div></div>
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Режим работы</b><span>Ежедневно 09:00 – 18:00</span></div></div>
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Режим работы</b><span>Без выходных:<br>Пн–Пт 09:00 – 18:00<br>Сб–Вс 10:00 – 18:00</span></div></div>
         <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><div><b>Instagram</b><a href="https://www.instagram.com/elite.stomtalgar" target="_blank" rel="noopener">@elite.stomtalgar</a></div></div>
         <a href="#booking" class="btn btn-gold" style="width:100%;margin-top:8px">Записаться на приём</a>
       </div>
@@ -983,7 +1078,8 @@ p{color:var(--muted)}
         <ul>
           <li><a href="tel:+77000201212">+7 700 020 1212</a></li>
           <li><a href="#contacts">ул. Лермонтова, 54а, Талгар</a></li>
-          <li><a href="#contacts">Ежедневно 09:00–18:00</a></li>
+          <li><a href="#contacts">Пн–Пт 09:00–18:00</a></li>
+          <li><a href="#contacts">Сб–Вс 10:00–18:00</a></li>
           <li><a href="https://www.instagram.com/elite.stomtalgar" target="_blank" rel="noopener">@elite.stomtalgar</a></li>
         </ul>
       </div>
@@ -1073,6 +1169,30 @@ p{color:var(--muted)}
     });
   });
 
+  /* Booking: dynamic time slots based on working hours */
+  var dateEl=document.getElementById('bdate'), timeEl=document.getElementById('btime');
+  // Working hours: Mon–Fri open 09:00, Sat–Sun open 10:00, close 18:00 (last slot 17:30)
+  function buildSlots(dateStr){
+    timeEl.innerHTML='';
+    if(!dateStr){ timeEl.innerHTML='<option value="">Сначала выберите день</option>'; return; }
+    var d=new Date(dateStr+'T00:00:00'), day=d.getDay(); // 0=Sun, 6=Sat
+    var startH=(day===0||day===6)?10:9, endMin=17*60+30; // last appointment 17:30
+    var ph=document.createElement('option'); ph.value=''; ph.textContent='Выберите время';
+    timeEl.appendChild(ph);
+    for(var m=startH*60; m<=endMin; m+=30){
+      var hh=String(Math.floor(m/60)).padStart(2,'0'), mm=String(m%60).padStart(2,'0');
+      var o=document.createElement('option'); o.value=hh+':'+mm; o.textContent=hh+':'+mm;
+      timeEl.appendChild(o);
+    }
+  }
+  // limit date picker to today..+60 days (local date, no timezone shift)
+  (function(){
+    var t=new Date(), max=new Date(); max.setDate(t.getDate()+60);
+    var iso=function(x){return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');};
+    dateEl.min=iso(t); dateEl.max=iso(max);
+  })();
+  dateEl.addEventListener('change',function(){ buildSlots(dateEl.value); });
+
   /* Booking form -> WhatsApp */
   var form=document.getElementById('bookingForm');
   form.addEventListener('submit',function(e){
@@ -1080,12 +1200,14 @@ p{color:var(--muted)}
     var name=document.getElementById('bname').value.trim(),
         phone=document.getElementById('bphone').value.trim(),
         service=document.getElementById('bservice').value,
-        date=document.getElementById('bdate').value;
+        date=dateEl.value,
+        time=timeEl.value;
     var msg='Здравствуйте! Хочу записаться в Elite Stom.%0A'
       +'Имя: '+encodeURIComponent(name)+'%0A'
       +'Телефон: '+encodeURIComponent(phone)+'%0A'
       +'Услуга: '+encodeURIComponent(service);
     if(date){ msg+='%0AЖелаемая дата: '+encodeURIComponent(date); }
+    if(time){ msg+='%0AЖелаемое время: '+encodeURIComponent(time); }
     window.open('https://wa.me/77000201212?text='+msg,'_blank');
   });
 
