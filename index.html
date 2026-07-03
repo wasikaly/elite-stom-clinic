@@ -210,6 +210,13 @@ p{color:var(--muted)}
 .svc .price a{font-weight:700;font-size:.9rem;color:var(--gold-dark);display:inline-flex;align-items:center;gap:5px;transition:gap .25s}
 .svc .price a:hover{gap:9px}
 .svc .price a svg{width:16px;height:16px}
+.svc .prices2{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.svc .prices2 .pp{display:flex;flex-direction:column;line-height:1.15}
+.svc .prices2 .pp small{font-size:.72rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.svc .prices2 .pp b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--green)}
+.svc .prices2 a{margin-left:auto;font-weight:700;font-size:.9rem;color:var(--gold-dark);display:inline-flex;align-items:center;gap:5px;transition:gap .25s;align-self:flex-end}
+.svc .prices2 a:hover{gap:9px}
+.svc .prices2 a svg{width:16px;height:16px}
 
 /* ===================== WORKS (before/after) ===================== */
 .works{background:var(--green-deep);color:#fff;position:relative;overflow:hidden}
@@ -659,7 +666,11 @@ p{color:var(--muted)}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3l6 6L9 20.5 3 21l.5-6z"/><path d="M13 5l6 6"/></svg></div>
         <h3>Хирургия</h3>
         <p>Удаление зубов любой сложности у взрослых и детей, аккуратно и без последствий.</p>
-        <div class="price"><div><b>от 2 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="prices2">
+          <div class="pp"><small>Детская</small><b>от 2 000 ₸</b></div>
+          <div class="pp"><small>Взрослая</small><b>от 10 000 ₸</b></div>
+          <a href="#booking" aria-label="Записаться на приём">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
       <div class="svc" data-reveal data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
@@ -765,15 +776,7 @@ p{color:var(--muted)}
         </div>
       </div>
       <div class="work" data-reveal>
-        <div class="ph"><img src="assets/case-cleaning-1.jpg" alt="Профессиональная чистка зубов до и после" loading="lazy"></div>
-        <div class="work-meta">
-          <span class="doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Врач: Асем Батырбековна</span>
-          <h3>Профессиональная чистка</h3>
-          <p>3-этапная чистка зубов: снят налёт и зубной камень, дёсны здоровы, улыбка снова сияет.</p>
-        </div>
-      </div>
-      <div class="work" data-reveal data-delay="1">
-        <div class="ph"><img src="assets/case-cleaning-2.jpg" alt="Профессиональная чистка зубов до и после — второй случай" loading="lazy"></div>
+        <div class="ph"><img src="assets/case-cleaning-2.jpg" alt="Профессиональная чистка зубов до и после" loading="lazy"></div>
         <div class="work-meta">
           <span class="doc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Врач: Асем Батырбековна</span>
           <h3>Чистка и здоровье дёсен</h3>
@@ -795,8 +798,9 @@ p{color:var(--muted)}
     <div class="gallery-grid">
       <figure class="tall" data-reveal><img src="assets/reception.jpg" alt="Ресепшен Elite Stom" loading="lazy"><figcaption>Зона ресепшен</figcaption></figure>
       <figure class="wide" data-reveal data-delay="1"><img src="assets/interior-room.jpg" alt="Лечебный кабинет" loading="lazy"><figcaption>Лечебный кабинет</figcaption></figure>
-      <figure data-reveal data-delay="2"><img src="assets/pediatric.jpg" alt="Детский приём" loading="lazy"><figcaption>Детский приём</figcaption></figure>
-      <figure data-reveal data-delay="1"><img src="assets/team-group.jpg" alt="Команда Elite Stom" loading="lazy"><figcaption>Наша команда</figcaption></figure>
+      <figure data-reveal data-delay="2"><img src="assets/kids-1.jpg" alt="Детский приём в Elite Stom" loading="lazy"><figcaption>Детский приём</figcaption></figure>
+      <figure data-reveal data-delay="1"><img src="assets/kids-2.jpg" alt="Наши маленькие пациенты" loading="lazy"><figcaption>Наши маленькие пациенты</figcaption></figure>
+      <figure data-reveal data-delay="2"><img src="assets/team-group.jpg" alt="Команда Elite Stom" loading="lazy"><figcaption>Наша команда</figcaption></figure>
     </div>
   </div>
 </section>
@@ -831,12 +835,16 @@ p{color:var(--muted)}
         <div class="member-body"><div class="role">Гигиенист</div><h3>Аяжан Медетовна</h3><p>Профгигиена и профилактика</p></div>
       </div>
       <div class="member" data-reveal data-delay="2">
-        <div class="ph"><img src="assets/doc-safarov.png" alt="Сафар Надирович"></div>
+        <div class="ph"><img src="assets/doc-safarov.jpg" alt="Сафар Надирович"></div>
         <div class="member-body"><div class="role">Хирург-имплантолог</div><h3>Сафар Надирович</h3><p>Имплантация и хирургия</p></div>
       </div>
       <div class="member" data-reveal>
         <div class="ph"><img src="assets/doc-ahror.png" alt="Ахрор Шухратович"></div>
         <div class="member-body"><div class="role">Анестезиолог-реаниматолог</div><h3>Ахрор Шухратович</h3><p>Седация и контроль анестезии</p></div>
+      </div>
+      <div class="member" data-reveal data-delay="1">
+        <div class="ph"><img src="assets/doc-aslbek.png" alt="Асылбек Жахонгирович"></div>
+        <div class="member-body"><div class="role">Врач общей практики</div><h3>Асылбек Жахонгирович</h3><p>Диагностика и лечение</p></div>
       </div>
     </div>
   </div>
