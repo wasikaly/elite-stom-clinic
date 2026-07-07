@@ -217,6 +217,10 @@ p{color:var(--muted)}
 .svc .prices2 a{margin-left:auto;font-weight:700;font-size:.9rem;color:var(--gold-dark);display:inline-flex;align-items:center;gap:5px;transition:gap .25s;align-self:flex-end}
 .svc .prices2 a:hover{gap:9px}
 .svc .prices2 a svg{width:16px;height:16px}
+.svc-sale{position:relative;border-color:var(--gold)}
+.svc-badge{position:absolute;top:16px;right:16px;background:var(--grad-gold);color:#33260a;font-size:.72rem;font-weight:800;letter-spacing:.03em;padding:5px 12px;border-radius:30px;box-shadow:var(--shadow-gold)}
+.price-sale{display:flex;flex-direction:column;line-height:1.05}
+.price-sale .old-price{font-size:.92rem;font-weight:600;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--gold-dark)}
 
 /* ===================== WORKS (before/after) ===================== */
 .works{background:var(--green-deep);color:#fff;position:relative;overflow:hidden}
@@ -650,11 +654,12 @@ p{color:var(--muted)}
         <p>Лечение во сне для детей и взрослых — без страха, боли и стресса. Под контролем врача-анестезиолога.</p>
         <div class="price"><div><b>от 29 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
-      <div class="svc" data-reveal data-delay="1">
+      <div class="svc svc-sale" data-reveal data-delay="1">
+        <span class="svc-badge">Акция −31%</span>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M8 6h8M9 10h6M10 14h4"/></svg></div>
         <h3>Имплантация зубов</h3>
         <p>Восстановление утраченных зубов на имплантах премиум-систем «под ключ» — надёжно и навсегда.</p>
-        <div class="price"><div><b>от 69 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="price"><div class="price-sale"><span class="old-price">100 000 ₸</span><b>от 69 000 ₸</b></div><a href="#booking">Записаться<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
       <div class="svc" data-reveal data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></div>
@@ -941,6 +946,14 @@ p{color:var(--muted)}
         <div class="faq-a"><p>Конечно. У нас есть детский врач, который лечит малышей в игровой форме, без боли и стресса. Наша цель — чтобы ребёнок уходил с улыбкой и не боялся стоматолога.</p></div>
       </div>
       <div class="faq-item" data-reveal>
+        <button class="faq-q">Что такое лечение во сне (седация)?<span class="pl">+</span></button>
+        <div class="faq-a"><p>Это лечение зубов в состоянии медикаментозного сна. Пациенту вводят безопасный препарат, он спокойно засыпает и просыпается уже после того, как всё сделано — без боли, страха и стресса. Это не общий наркоз: дыхание сохраняется самостоятельным, а весь процесс контролирует отдельный врач-анестезиолог. Так за один визит можно вылечить сразу несколько зубов.</p></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <button class="faq-q">Кому подходит седация и безопасна ли она?<span class="pl">+</span></button>
+        <div class="faq-a"><p>Седация подходит детям, которые боятся или не могут долго сидеть в кресле, а также взрослым с сильным страхом стоматолога, повышенным рвотным рефлексом или большим объёмом лечения. Это безопасно: перед процедурой врач собирает анамнез и оценивает состояние здоровья, а во время лечения анестезиолог непрерывно контролирует пульс, дыхание и давление. После пробуждения нужно немного отдохнуть — и можно идти домой. Точную дозировку и возможность седации врач определяет на консультации.</p></div>
+      </div>
+      <div class="faq-item" data-reveal>
         <button class="faq-q">Как записаться на приём?<span class="pl">+</span></button>
         <div class="faq-a"><p>Оставьте заявку через форму онлайн-записи на сайте, напишите нам в WhatsApp или позвоните по номеру +7 700 020 1212. Мы перезвоним в течение 15 минут и подберём удобное время.</p></div>
       </div>
@@ -1039,7 +1052,7 @@ p{color:var(--muted)}
         <a href="#booking" class="btn btn-gold" style="width:100%;margin-top:8px">Записаться на приём</a>
       </div>
       <div class="map-wrap" data-reveal data-delay="1">
-        <iframe src="https://maps.google.com/maps?q=43.310164,77.228306&hl=ru&z=17&output=embed" loading="lazy" title="Карта Elite Stom, Талгар" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=43.310520,77.226650&hl=ru&z=17&output=embed" loading="lazy" title="Карта Elite Stom, Талгар" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
